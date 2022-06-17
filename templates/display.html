@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+   {{cd}}
+   <!-- <head>
+      <script type="text/javascript">
+         function preventBack() {
+             window.history.forward(); 
+         }
+           
+         setTimeout("preventBack()", 0);
+           
+         window.onunload = function () { null };
+     </script>
+   </head> -->
+   <body bgcolor="yellow">
+    <h1>Welcome  {{account[0][0]}}</h1>
+    <h4>You can view and edit your profile from here</h4>
+    <table border = 1>
+        <td>{{account[0]}}</td>
+      
+    </table>
+    <form action="" method = 'post'>
+       <p>Username : <input type="text" name = "username" value="{{account[0][0]}}"/></p>
+       <p>Email : <input type="email" name = "email" value="{{account[0][1]}}"/></p>
+       <p>Password : <input type="text" name = "password" value="{{account[0][2]}}"/></p>
+       <p>City : <input type="text" name = "city" value="{{account[0][4]}}"/></p>
+       <p><input type="submit" value = "submit"  /> </p>
+       <a href="/delete/{{account[0][5]}}" class="btn btn-danger btn-xs" 
+       onclick="return confirm('Are You Sure To Delete ?')">Delete</a>
+    </form>
+       <br>
+        {{cd}}
+        <br>
+        <!-- <embed src="D:/python_esmsys/flask/flask_login_project/static/{{cd}}"  width="500" height="500" alt=""> -->
+         <!-- <embed src="D:/python_esmsys/flask/flask_login_project/static/Jinit_Patel_Vaccine.pdf"  width="500" height="500" alt=""> -->
+         
+         
+        <!-- {% for name in cd %} -->
+            <!-- <img src="static/{{name}}"  width="500" height="500" alt=""> -->
+            <!-- <embed src="static/{{cd[0]}}"  width="500" height="500" alt=""> -->
+
+        <!-- {% endfor %} -->
+            <!-- <img src= "flask_login_project/static/{{cd}}"  width="500" height="500" alt=""> -->
+      </form>
+      <embed src="\static\{{cd}}" width="500" height="500" alt="">
+         {{cd}}
+
+
+         <!-- {% if cd != null %} -->
+         <!-- <a href="D:\python_esmsys\flask\flask_login_project\static\{{cd}}" download>down</a> -->
+         <a href = "\static\{{cd}}" download > <h2>Download PDF</h2>
+        <!-- {% endif %} -->
+   </body>
+</html>
+
